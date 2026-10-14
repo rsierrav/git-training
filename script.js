@@ -1,19 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.getElementById('search-input');
   const gridContainer = document.getElementById('pokemon-grid');
-  let allPokemon = [];
 
-  // TODO: Issue #1 - Fetch first 20 Pokémon from PokeAPI
-  // Endpoint: https://pokeapi.co/api/v2/pokemon?limit=20
-  // Store results in allPokemon
+  // fetch() retrieves data from a network resource (the PokeAPI) and returns a Promise.
+  async function loadPikachu() {
+    try {
+      const response = await fetch('https://pokeapi.co/api/v2/pokemon/pikachu');
+      if (!response.ok) throw new Error('Failed to fetch Pokémon data');
+      const data = await response.json();
 
-  // TODO: Issue #2 - Render Pokémon cards to the DOM
-  // Create .pokemon-card elements with image, name, and id
-  // Append to gridContainer
+      const card = document.createElement('div');
+      card.className = 'pokemon-card';
+      card.innerHTML = `
+        <img src="${data.sprites.front_default}" alt="${data.name}">
+        <h2>${data.name}</h2>
+        <p>ID: ${data.id}</p>
+      `;
 
-  // TODO: Issue #3 - Implement search/filter functionality
-  // Listen to 'input' event on searchInput
-  // Filter allPokemon and re-render grid
+      gridContainer.appendChild(card);
+    } catch (error) {
+      gridContainer.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+    }
+  }
 
-  console.log('Pixeldex initialized. Ready for git issues.');
+  loadPikachu();
 });
