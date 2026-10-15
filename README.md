@@ -1,5 +1,5 @@
 # 🎮 Pixeldex - Beginner Pokémon Dev Project
-
+> Fork this repo to work on the issues on your own and practice git commands and moving in the terminal. 
 ## 📖 Description
 A simple, beginner-friendly Pokémon-inspired "Pixeldex" application designed as an introduction to software development. This project focuses on teaching terminal navigation, Git fundamentals, and vanilla web development.
 
