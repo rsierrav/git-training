@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-  --poke-red: #E3350D;
+  --poke-red: #f0834a;
   --poke-yellow: #FFCB05;
   --poke-blue: #3B4CCA;
-  --poke-dark: #2A2A2A;
-  --poke-light: #F5F5F5;
+  --poke-dark: #a5c61d;
+  --poke-light: #f5f4f2;
 }
 
 * {
@@ -15,7 +15,8 @@
 }
 
 body {
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
   background-color: var(--poke-light);
   color: var(--poke-dark);
   padding: 2rem;
@@ -31,12 +32,14 @@ header {
 header h1 {
   color: var(--poke-red);
   font-size: 1.8rem;
+  text-shadow: 2px 2px var(--poke-blue);
 }
 
 header p {
-  font-size: 0.7rem;
-  color: #666;
+  font-size: 0.8rem;
+  color: #a1c519;
   margin-top: 0.5rem;
+  text-shadow: 0.5px 0.5px var(--poke-blue);
 }
 
 #search-controls {
@@ -47,17 +50,20 @@ header p {
 #search-input {
   padding: 0.6rem;
   font-family: inherit;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   border: 3px solid var(--poke-blue);
-  background: #fff;
+  background: #f5f4f2;
   width: 100%;
   max-width: 300px;
+  text-shadow: 0.5px 0.5px var(--poke-blue);
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 1rem;
+  color: #b2c907;
+  text-shadow: 1px 1px var(--poke-blue);
 }
 
 .pokemon-card {
@@ -72,16 +78,17 @@ header p {
 .pokemon-card:hover {
   transform: translateY(-3px);
   border-color: var(--poke-yellow);
+  \\
 }
 
 .pokemon-card img {
-  width: 80px;
-  height: 80px;
+  width: auto;
+  height: auto;
   image-rendering: pixelated;
 }
 
 .pokemon-card h3 {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   margin-top: 0.5rem;
   text-transform: capitalize;
 }
