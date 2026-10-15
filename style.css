@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
   --poke-red: #E3350D;
   --poke-yellow: #FFCB05;
@@ -6,9 +8,11 @@
   --poke-light: #F5F5F5;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: 'Press Start 2P', monospace;
@@ -17,25 +21,67 @@ body {
   padding: 2rem;
 }
 
-header { text-align: center; margin-bottom: 2rem; border-bottom: 4px solid var(--poke-red); padding-bottom: 1rem; }
-header h1 { color: var(--poke-red); font-size: 1.8rem; }
-header p { font-size: 0.7rem; color: #666; margin-top: 0.5rem; }
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 4px solid var(--poke-red);
+  padding-bottom: 1rem;
+}
 
-#search-controls { text-align: center; margin-bottom: 1.5rem; }
+header h1 {
+  color: var(--poke-red);
+  font-size: 1.8rem;
+}
+
+header p {
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+#search-controls {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 #search-input {
-  padding: 0.6rem; font-family: inherit; font-size: 0.7rem;
-  border: 3px solid var(--poke-blue); background: #fff;
-  width: 100%; max-width: 300px;
+  padding: 0.6rem;
+  font-family: inherit;
+  font-size: 0.7rem;
+  border: 3px solid var(--poke-blue);
+  background: #fff;
+  width: 100%;
+  max-width: 300px;
 }
 
 .grid-container {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
 }
 
 .pokemon-card {
-  background: #fff; border: 3px solid var(--poke-dark); padding: 0.8rem;
-  text-align: center; cursor: pointer; transition: transform 0.1s;
+  background: #fff;
+  border: 3px solid var(--poke-dark);
+  padding: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.1s;
 }
-.pokemon-card:hover { transform: translateY(-3px); border-color: var(--poke-yellow); }
-.pokemon-card img { width: 80px; height: 80px; image-rendering: pixelated; }
-.pokemon-card h3 { font-size: 0.6rem; margin-top: 0.5rem; text-transform: capitalize; }
+
+.pokemon-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--poke-yellow);
+}
+
+.pokemon-card img {
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+}
+
+.pokemon-card h3 {
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
